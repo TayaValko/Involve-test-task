@@ -1,0 +1,57 @@
+/* break points*/
+$xl: 1440px;
+$l: 1240px;
+$m: 1024px;
+$s: 768px;
+$xs: 320px;
+
+
+@mixin xSmall {
+	@media only screen  and (max-width: #{$s - 1px}) {
+		@content;
+	}
+}
+@mixin Small {
+	@media only screen and (min-width: #{$s}) and (max-width: #{$m - 1px}) {
+		@content;
+	}
+}
+@mixin Medium {
+	@media only screen and (min-width: #{$m}) and (max-width: #{$l - 1px}) {
+		@content;
+	}
+}
+@mixin Large {
+	@media only screen and (min-width: #{$l}) and (max-width: #{$xl - 1px}) {
+		@content;
+	}
+}
+@mixin xLarge {
+	@media only screen and (min-width: #{$xl}) {
+		@content;
+	}
+}
+
+
+
+/****************************
+ HIGH PPI DISPLAY BACKGROUNDS
+*****************************/
+
+@mixin background-2x($path, $ext: "png", $w: auto, $h: auto, $pos: left top, $repeat: no-repeat) {
+
+	$at1x_path: "#{$path}.#{$ext}";
+	$at2x_path: "#{$path}@2x.#{$ext}";
+
+	background-image: url("#{$at1x_path}");
+	background-size: $w $h;
+	background-position: $pos;
+	background-repeat: $repeat;
+
+	@media all and (-webkit-min-device-pixel-ratio : 1.5),
+	all and (-o-min-device-pixel-ratio: 3/2),
+	all and (min--moz-device-pixel-ratio: 1.5),
+	all and (min-device-pixel-ratio: 1.5) {
+		background-image: url("#{$at2x_path}");
+	}
+}

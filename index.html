@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>TEST Valko T. V.</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <a class="header__logo" href="#"><img src="img/Logo.png" alt="Logo"></a>
+        <ul class="header__menu">
+            <li class="item"><a href="#Howitw">How it works?</a></li>
+            <li class="item"><a href="#browse">Browse</a></li>
+            <li class="item"><a href="#research">Research</a></li>
+            <li class="item"><a href="#about">About</a></li>
+            <li class="item"><a href="#contacts">Contacts</a></li>
+            <li class="item btn__menu"><a href="#signup">Sign Up</a></li>
+        </ul>
+    </header>
+
+    <main class="block__main">
+        <img src="img/Map.png" class="map">
+        <div class="container">
+            <div class="contact-form">
+                <form id="contact-form" action="/" method="POST" class="form">
+                    <h3>Contact Us</h3>
+                    <div class="form__item">
+                        <label for="id_subject" class="item-title__label">Subject</label>
+                        <select class="dropdown" placeholder="Please choose" name="id_subject">
+                            <option>Work opportunities</option>
+                            <option>Questions about product</option>
+                            <option>Сooperation</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form__item">
+                        <div class="item-title">
+                            <label for="username" class="item-title__label">NAME</label>
+                            <span class="form-error" id="username_error">Error message</span>
+                        </div>
+                        <input type="text" name="username" placeholder="Enter your name..." maxlength="24" id="username" tabindex="1" required>
+                    </div>
+                    <div class="form__item">
+                        <div class="item-title">
+                            <label for="phone" class="item-title__label">Phone number</label>
+                            <span class="form-error" id="phone_error">Error message</span>
+                        </div>
+                        <input type="tel" name="phone" placeholder="Enter your phone number..." maxlength="12" id="phone" tabindex="3" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="email" class="item-title__label">EMAIL</label>
+                        <input type="email" name="email" placeholder="Enter your email address..." id="email" tabindex="2" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="message" class="item-title__label">Message</label>
+                        <textarea name="message" placeholder="Your message..." id="message" tabindex="5"></textarea>
+                    </div>
+                    <button type="submit" name="sent" id="contact-submit">
+                        <span class="submit-text">Sent</span>
+                        <i class="fa fa-spinner fa-spin"></i>
+                    </button>
+                </form>
+                <div class="answer">
+                    <img src="img/Illustration.png">
+                    <h3>We received your message!</h3>
+                    <h4>Thanks for contacting us! We will get back to you ASAP</h4>
+                    <button class="btn__answer">Great!</button>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="contact-block">
+                    <div class="location">
+                        <i class="fa fa-map-marker"></i>
+                        <span>888 Brannan Street, <br>
+                            in San Francisco, California</span>
+                    </div>
+                    <div class="phone">
+                        <i class="fa fa-phone"></i>
+                        <span>+1 (039) 032 03 84</span>
+                    </div>
+                    <div class="email">
+                        <i class="fa fa-envelope"></i>
+                        <span>info@airbnb.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
